@@ -58,6 +58,8 @@ The created cluster will use 6GB of RAM, so it's very likely that your machine w
 
 ### Creating
 
+Add your private SSH key path in `SSH_KEY_PATH` variable on Vagrantfile
+
 ```sh
 make cluster
 ```
