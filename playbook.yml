@@ -1,0 +1,20 @@
+---
+- name: Install K8S on cluster
+  hosts: all
+  become: true
+  roles:
+    - common
+
+- name: Initialize cluster on control-plane
+  hosts: control-plane
+  become: true
+  gather_facts: false
+  roles:
+    - control-plane
+
+- name: Join worker nodes to control plane node
+  hosts: data-plane
+  become: true
+  gather_facts: false
+  roles:
+    - data-plane
