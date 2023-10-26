@@ -85,3 +85,7 @@ make destroy
 ## Other use case
 
 You can just run the playbook that creates a K8S cluster, just populate correctly on hosts.ini
+
+```sh
+cd ansible && ansible-playbook -i hosts.ini cluster.yml
+```
