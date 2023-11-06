@@ -1,10 +1,10 @@
 SHELL := /bin/bash
 
 cluster:
-	vagrant up && bash create_hosts.sh && ansible-playbook -i ansible/hosts.ini ansible/cluster.yml
+	vagrant up && bash create_hosts.sh && cd kubespray && ansible-playbook -b -v -i inventory/vagrant/inventory.ini cluster.yml
 
 reset:
-	ansible-playbook -i ansible/hosts.ini ansible/reset.yml
+	cd kubespray && ansible-playbook -i inventory/vagrant/inventory.ini -b -v reset.yml
 
 destroy:
-	vagrant destroy -f
+	vagrant destroy -f && rm -rf kubespray/inventory/vagrant
