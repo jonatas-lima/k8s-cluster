@@ -59,7 +59,7 @@ sudo yum -y install vagrant
 First of all, clone this repository:
 
 ```sh
-git clone --recurse-submodules
+git clone git@github.com:jonatas-lima/k8s-cluster.git --recurse-submodules
 ```
 
 The created cluster will use *GB of RAM, so it's very likely that your machine will slow down a little.
