@@ -10,6 +10,8 @@ Why? **Doing this way is more fun and more similar to how it is done in on-premi
 
 Of course this way it's more complicated, but it will be worth it.
 
+Also, it is used [Kubespray](https://github.com/kubernetes-sigs/kubespray) to configure the production-ready K8S cluster.
+
 ## Before we start
 
 ### Pre requisites
@@ -54,7 +56,13 @@ sudo yum -y install vagrant
 
 ## Managing your cluster
 
-The created cluster will use 6GB of RAM, so it's very likely that your machine will slow down a little.
+First of all, clone this repository:
+
+```sh
+git clone git@github.com:jonatas-lima/k8s-cluster.git --recurse-submodules
+```
+
+The created cluster will use *GB of RAM, so it's very likely that your machine will slow down a little.
 
 ### Creating
 

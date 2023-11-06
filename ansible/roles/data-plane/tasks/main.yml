@@ -1,3 +1,0 @@
----
-- name: Join control-plane K8S cluster
-  ansible.builtin.script: join_command.sh
